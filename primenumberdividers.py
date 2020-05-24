@@ -2,12 +2,12 @@ import math
 import operator
 import sys
 try:
-    x = int(input("Asal çarpanlarını öğrenmeyi istediğiniz sayıyı giriniz: "))
+    x = int(input("Enter the number you want to learn prime dividers: "))
 except ValueError or NameError:
     print("error")
     sys.exit(1)
 while x <= 1:
-    print ("Sayının 1'den büyük olması gerekir: ")
+    print ("Number must be bigger than 1: ")
     break
 y = 1
 prime_dividers = []
@@ -34,4 +34,4 @@ while y < x:
     if x % y == 0:
         if is_prime(y) == True:
             prime_dividers.append(y)
-print(str(x) + " sayısının asal çarpanlar kümesi = " + str(prime_dividers))
+print("Prime dividers of " + str(x) + " is = " + str(prime_dividers))
